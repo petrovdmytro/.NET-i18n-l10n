@@ -1,8 +1,57 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using i18n_l10n_MVC_NETCore.Converters;
+@inject IViewLocalizer Localizer
+
+@{
+    ViewData["Title"] = @Localizer["Home page"];
+    var currentCulture = System.Globalization.CultureInfo.CurrentCulture;
+    string cultureUIstring = System.Globalization.CultureInfo.CurrentUICulture.DisplayName;
+    var regionInfo = new System.Globalization.RegionInfo(currentCulture.LCID);
+    var now = DateTime.Now;
+    double chinaPopulation = 1411778724;
+    double areaOfUkraine = 603700;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="row text-center">
+    <h1 class="display-4">@Localizer["Welcome"]</h1>
+    <div class="col-md-4 col-lg-12">
+        <div class="card text-start">
+            <div class="card-body">
+                <h5 class="card-title">@Localizer["Currently"]:</h5>
+                <p>@now.ToLocalTime()</p>
+                <p>@now.ToLongDateString()</p>
+                <p>@now.ToString("f")</p>
+                <p>@now.ToString("M")</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-lg-6">
+        <div class="card text-start">
+            <div class="card-body">
+                <h5 class="card-title">@Localizer["Numbers"]:</h5>
+                <p><b>@Localizer["PI number"]:</b> @Math.PI.ToString("n", currentCulture)</p>
+                <p><b>@Localizer["ChinaPopulation"]:</b> @chinaPopulation.ToString("0.##", currentCulture) @Localizer["of people"]</p>
+                @if (regionInfo.IsMetric)
+                {
+                    <p><b>@Localizer["UkraineArea"]:</b> @areaOfUkraine.ToString("0.##", currentCulture) @Localizer["SquareKm"]</p>
+                }
+                else if (CustomImperialSystemConverter.TryConvertToSquareMiles(areaOfUkraine, CustomImperialSystemConverter.MetricSystemSquareUnit.SquareKilometers, ref areaOfUkraine))
+                {
+                    <p><b>@Localizer["UkraineArea"]:</b> @areaOfUkraine.ToString("0.##", currentCulture) @Localizer["SquareMiles"]</p>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-lg-6">
+        <div class="card text-start">
+            <div class="card-body">
+                <h5 class="card-title">@Localizer["Ball"]:</h5>
+                <p>@ViewData["Weight"]</p>
+                <p>@ViewData["Circumference"]</p>
+                <p>@ViewData["Volume"]</p>
+            </div>
+        </div>
+    </div>
+    
+    <p>@Localizer["About"]</p>
 </div>

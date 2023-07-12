@@ -117,37 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Circumference" xml:space="preserve">
-    <value>Circonférence</value>
+  <data name="About" xml:space="preserve">
+    <value>Learn about &lt;a href="https://docs.microsoft.com/aspnet/core"&gt;building Web apps with ASP.NET Core&lt;/a&gt;</value>
   </data>
-  <data name="LengthUnit_centimeter_abbr" xml:space="preserve">
-    <value>cm</value>
+  <data name="Ball" xml:space="preserve">
+    <value>Ball for soccer</value>
   </data>
-  <data name="LengthUnit_kilometer_abbr" xml:space="preserve">
-    <value>km</value>
+  <data name="ChinaPopulation" xml:space="preserve">
+    <value>China population</value>
   </data>
-  <data name="LengthUnit_meter_abbr" xml:space="preserve">
-    <value>m</value>
+  <data name="Currently" xml:space="preserve">
+    <value>Currently</value>
   </data>
-  <data name="Volume" xml:space="preserve">
-    <value>Volume</value>
+  <data name="Home page" xml:space="preserve">
+    <value>Home</value>
   </data>
-  <data name="VolumeUnit_liter_abbr" xml:space="preserve">
-    <value>l</value>
+  <data name="Numbers" xml:space="preserve">
+    <value>Interesting numbers</value>
   </data>
-  <data name="VolumeUnit_milliliter_abbr" xml:space="preserve">
-    <value>ml</value>
+  <data name="of people" xml:space="preserve">
+    <value>people</value>
   </data>
-  <data name="Weight" xml:space="preserve">
-    <value>Lester</value>
+  <data name="PI number" xml:space="preserve">
+    <value>PI number</value>
   </data>
-  <data name="WeightUnit_grammes_abbr" xml:space="preserve">
-    <value>g</value>
+  <data name="SquareMiles" xml:space="preserve">
+    <value>mi&lt;sup&gt;2&lt;/sup&gt;</value>
   </data>
-  <data name="WeightUnit_kilogrammes_abbr" xml:space="preserve">
-    <value>kg</value>
+  <data name="UkraineArea" xml:space="preserve">
+    <value>Area of Ukraine</value>
   </data>
-  <data name="WeightUnit_milligrammes_abbr" xml:space="preserve">
-    <value>mg</value>
+  <data name="Welcome" xml:space="preserve">
+    <value>Welcome to localized app</value>
   </data>
 </root>
